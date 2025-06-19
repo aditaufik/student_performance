@@ -3,8 +3,8 @@ import pandas as pd
 import joblib
 
 # Load model dan encoder
-model = joblib.load('model_rf.joblib')
-label_encoder = joblib.load('label_encoder.joblib')
+model = joblib.load('/model/model_rf.joblib')
+label_encoder = joblib.load('model/label_encoder.joblib')
 
 st.set_page_config(page_title="Dropout Predictor App", layout="wide")
 st.title("🎓 Student Dropout Prediction")
