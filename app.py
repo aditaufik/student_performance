@@ -28,8 +28,8 @@ with st.form("student_form"):
         curricular_units_2nd_sem_evaluations = st.slider("Evaluasi Semester 2", 0, 30, 5)
         previous_qualification_grade = st.slider("Nilai Kualifikasi Sebelumnya", 0.0, 200.0, 120.0)
         unemployment_rate = st.slider("Tingkat Pengangguran", 0.0, 20.0, 5.0)
-        gdp = st.slider("GDP", -10.0, 5.0, 1.0)
-        inflation_rate = st.slider("Inflasi", -10.0, 20.0, 3.0)
+        gdp = st.slider("GDP", -5.0, 5.0, 1.0)
+        inflation_rate = st.slider("Inflasi", -1.0, 20.0, 3.0)
 
 
     with col3:
