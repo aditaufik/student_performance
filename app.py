@@ -14,8 +14,6 @@ with st.form("student_form"):
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        debtor = st.selectbox("Debtor", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No", help="Does the student have debts?")
-        displaced = st.selectbox("Displaced", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No", help="Is the student from a displaced region?")
         gender = st.radio("Gender", [0, 1], format_func=lambda x: "Male" if x == 1 else "Female", help="Gender of the student")
         age_at_enrollment = st.slider("Age at Enrollment", 17, 70, 22, help="Age when the student enrolled")
         application_order = st.slider("Application Order", 0, 9, 1, help="Order in which the student chose the course")
@@ -80,6 +78,8 @@ with st.form("student_form"):
             42: "Prof Higher Tech",
             43: "Master 2nd Cycle"
         }[x], help="The qualification obtained before enrolling in higher education")
+        debtor = st.selectbox("Debtor", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No", help="Does the student have debts?")
+        displaced = st.selectbox("Displaced", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No", help="Is the student from a displaced region?")
         
     with col2:
         admission_grade = st.slider("Admission Grade", 80.0, 200.0, 120.0, help="The student's score on the admission exam (80 - 200)")
