@@ -104,36 +104,36 @@ with st.form("student_form"):
     submitted = st.form_submit_button("🔍 Predict")
 
 if submitted:
-        data = pd.DataFrame({
-            'Admission_grade': [admission_grade],
-            'Age_at_enrollment': [age_at_enrollment],
-            'Curricular_units_1st_sem_grade': [curricular_units_1st_sem_grade],
-            'Curricular_units_1st_sem_approved': [curricular_units_1st_sem_approved],
-            'Curricular_units_2nd_sem_grade': [curricular_units_2nd_sem_grade],
-            'Curricular_units_1st_sem_enrolled': [curricular_units_1st_sem_enrolled],
-            'Curricular_units_2nd_sem_enrolled': [curricular_units_2nd_sem_enrolled],
-            'Curricular_units_1st_sem_evaluations': [curricular_units_1st_sem_evaluations],
-            'Curricular_units_2nd_sem_evaluations': [curricular_units_2nd_sem_evaluations],
-            'Previous_qualification_grade': [previous_qualification_grade],
-            'Unemployment_rate': [unemployment_rate],
-            'GDP': [gdp],
-            'Inflation_rate': [inflation_rate],
-            'Tuition_fees_up_to_date': [tuition_fees_up_to_date],
-            'Scholarship_holder': [scholarship_holder],
-            'Debtor': [debtor],
-            'Displaced': [displaced],
-            'Gender': [gender],
-            'Application_order': [application_order],
-            'Application_mode': [application_mode],
-            'Previous_qualification': [previous_qualification],
-        })
+    data = pd.DataFrame({
+        'Admission_grade': [admission_grade],
+        'Age_at_enrollment': [age_at_enrollment],
+        'Curricular_units_1st_sem_grade': [curricular_units_1st_sem_grade],
+        'Curricular_units_1st_sem_approved': [curricular_units_1st_sem_approved],
+        'Curricular_units_2nd_sem_grade': [curricular_units_2nd_sem_grade],
+        'Curricular_units_1st_sem_enrolled': [curricular_units_1st_sem_enrolled],
+        'Curricular_units_2nd_sem_enrolled': [curricular_units_2nd_sem_enrolled],
+        'Curricular_units_1st_sem_evaluations': [curricular_units_1st_sem_evaluations],
+        'Curricular_units_2nd_sem_evaluations': [curricular_units_2nd_sem_evaluations],
+        'Previous_qualification_grade': [previous_qualification_grade],
+        'Unemployment_rate': [unemployment_rate],
+        'GDP': [gdp],
+        'Inflation_rate': [inflation_rate],
+        'Tuition_fees_up_to_date': [tuition_fees_up_to_date],
+        'Scholarship_holder': [scholarship_holder],
+        'Debtor': [debtor],
+        'Displaced': [displaced],
+        'Gender': [gender],
+        'Application_order': [application_order],
+        'Application_mode': [application_mode],
+        'Previous_qualification': [previous_qualification],
+    })
 
-        data = pd.get_dummies(data)
-        for col in model.feature_names_in_:
-            if col not in data.columns:
-                data[col] = 0
-        data = data[model.feature_names_in_]
-        pred = model.predict(data)
-        label = label_encoder.inverse_transform(pred)[0]
+    data = pd.get_dummies(data)
+    for col in model.feature_names_in_:
+        if col not in data.columns:
+            data[col] = 0
+    data = data[model.feature_names_in_]
+    pred = model.predict(data)
+    label = label_encoder.inverse_transform(pred)[0]
 
-        st.success(f"📘 Prediction Result: **{label}**")
+    st.success(f"📘 Prediction Result: **{label}**")
