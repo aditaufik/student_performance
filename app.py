@@ -141,6 +141,7 @@ with st.form("student_form"):
         result_df = data.copy()
         result_df['Prediction'] = label
         csv = result_df.to_csv(index=False)
+        
         st.download_button(
             label="📥 Download Prediction as CSV",
             data=csv,
