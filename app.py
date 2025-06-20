@@ -78,8 +78,6 @@ with st.form("student_form"):
             42: "Prof Higher Tech",
             43: "Master 2nd Cycle"
         }[x], help="The qualification obtained before enrolling in higher education")
-        debtor = st.selectbox("Debtor", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No", help="Does the student have debts?")
-        displaced = st.selectbox("Displaced", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No", help="Is the student from a displaced region?")
         
     with col2:
         admission_grade = st.slider("Admission Grade", 80.0, 200.0, 120.0, help="The student's score on the admission exam (80 - 200)")
