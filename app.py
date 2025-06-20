@@ -137,14 +137,3 @@ if submitted:
         label = label_encoder.inverse_transform(pred)[0]
 
         st.success(f"📘 Prediction Result: **{label}**")
-
-        result_df = data.copy()
-        result_df['Prediction'] = label
-        csv = result_df.to_csv(index=False)
-        
-        st.download_button(
-            label="📥 Download Prediction as CSV",
-            data=csv,
-            file_name='student_prediction.csv',
-            mime='text/csv'
-        )
