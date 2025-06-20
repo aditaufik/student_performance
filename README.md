@@ -32,8 +32,8 @@ pipenv install
 pipenv shell
 pip install -r requirements.txt
 ```
-- Note*
-Turunkan versi scikit learn jika bermasalah dengan dependensi imbalanced_learn
+- Note:
+Turunkan versi python (ke versi 3.9) dan scikit learn jika bermasalah dengan dependensi imbalanced_learn
 
 ## Business Dashboard
 Business dashboard dibuat menggunakan Metabase dan berisi visualisasi untuk memantau status siswa dan faktor-faktor yang memperngaruhinya. Dashboard ini membantu institusi mengambil keputusan berbasis data.
