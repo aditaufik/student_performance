@@ -103,7 +103,7 @@ with st.form("student_form"):
 
     submitted = st.form_submit_button("🔍 Predict")
 
-    if submitted:
+if submitted:
         data = pd.DataFrame({
             'Admission_grade': [admission_grade],
             'Age_at_enrollment': [age_at_enrollment],
