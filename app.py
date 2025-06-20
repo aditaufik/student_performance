@@ -95,7 +95,7 @@ with st.form("student_form"):
         curricular_units_1st_sem_evaluations = st.slider("1st Semester Evaluations", 0, 45, 5, help="Number of evaluations in 1st semester")
         curricular_units_2nd_sem_evaluations = st.slider("2nd Semester Evaluations", 0, 33, 5, help="Number of evaluations in 2nd semester")
         previous_qualification_grade = st.slider("Previous Qualification Grade", 95.0, 190.0, 120.0, help="Grade obtained in previous education")
-        unemployment_rate = st.slider("Unemployment Rate", 7.0, 17.0, 11.0, help="National unemployment rate at the time")
+        unemployment_rate = st.slider("Unemployment Rate", 0.0, 17.0, 11.0, help="National unemployment rate at the time")
         gdp = st.slider("GDP Growth", -4.00, 4.00, 1.0, help="Gross Domestic Product growth (%)")
         inflation_rate = st.slider("Inflation Rate", -1.0, 4.0, 1.2, help="National inflation rate (%)")
         tuition_fees_up_to_date = st.selectbox("Tuition Fees Up To Date", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No", help="Is the student's tuition paid up to date?")
